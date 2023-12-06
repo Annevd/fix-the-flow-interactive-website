@@ -133,7 +133,7 @@
                 <button class="add-list">
                     <i class='bx bx-list-plus'></i>
                 </button>
-                <button class="delete-btn">
+                <button id="button" class="delete-btn">
                     <i class='bx bxs-trash'></i>
                 </button>
             </div>
@@ -474,5 +474,22 @@
             <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
         </div>
     </div>
+
+    <dialog id="dialog" class="warning-overlay">
+        <div id="popup" class="warning-popup">
+            <p>Weet je zeker dat je dit boek wilt verwijderen?</p>
+            <div class="warning-buttons">
+            <button id="popup-delete"> Ja, verwijderen</button>
+            <button id="popup-close">Nee, annuleren</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="dialog-success" class="warning-overlay">
+        <div class="dialog-success">
+        <p>Het boek is succesvol verwijderd!</p>
+        <button id="success-close">&times;</button>
+        </div>
+    </dialog>
 
 </main>

@@ -68,6 +68,12 @@ body {
     font-family: AvenirMedium, Arial;
 }
 
+/* Zorgt ervoor dat je niet kan scrollen als je in de warning popup zit */
+body.dont-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
 /* Maakt de selectie achtergrond rood en de tekst wit */
 ::selection {
     background-color: var(--primary-color);
@@ -696,6 +702,11 @@ body:has(.overlay:target) main {
     border-radius: var(--border-radius);
 }
 
+.page-container li:first-of-type,
+.page-container li:last-of-type {
+    padding: 0;
+}
+
 .page-container li:nth-of-type(2) {
     background: white;
 }
@@ -816,6 +827,63 @@ body.dark .book .list-btn a:focus {
 
 body.dark .overlay {
     background: rgb(255 255 255 / 42%);
+}
+
+/* Javascript warning popup */
+
+.warning-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* gaat de helft van zichzelf naar links en omlaag */
+    padding: 2em;
+    border-radius: var(--border-radius);
+    border: none;
+    z-index: 100;
+}
+
+::backdrop {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.warning-popup p {
+    margin-bottom: var(--white-space-02);
+}
+
+.warning-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.warning-buttons button {
+    margin: 0.5rem auto;
+    padding: var(--padding-01);
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    background: var(--body-color);
+    box-shadow: var(--box-shadow-01);
+    font-family: AvenirMedium, Arial;
+    font-size: var(--font-size-standard);
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+.dialog-success {
+    display: flex;
+    align-items: center;
+}
+
+.dialog-success button {
+    margin-left: var(--white-space-02);
+    appearance: none;
+    height: auto;
+    border: none;
+    background: none;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 /* Media queries */
