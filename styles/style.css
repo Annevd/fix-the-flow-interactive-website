@@ -1,0 +1,988 @@
+/* Fonts being used by the oba */
+@font-face {
+    font-family: AvenirRoman;
+    src: url(../fonts/Avenir-roman.ttf);
+}
+
+@font-face {
+    font-family: AvenirMedium;
+    src: url(../fonts/Avenir-medium.ttf);
+}
+
+@font-face {
+    font-family: AvenirBlack;
+    src: url(../fonts/Avenir\ -black.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom properties */
+
+:root {
+    /* Colors */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: /*#FF0000*/ #EB0000;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: /*#707070*/ #3a3b3c;
+
+    /* Font */
+    --font-size-standard: 1rem;
+
+    /* Border-radius */
+    --border-radius: 0.75rem;
+
+    /* Box model */
+    --padding-01: 0.5rem 0.75rem;
+    --white-space: 2rem;
+    --white-space-02: 1rem;
+
+    /* Box-shadow */
+    --box-shadow-01: 3px 3px 2px rgb(187, 187, 187);
+
+    /* Transition */
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+/* Custom properties voor dark mode */
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+body {
+    /* min-height: calc(100vh - 4.5rem); */
+    background-color: var(--body-color);
+    font-family: AvenirMedium, Arial;
+}
+
+/* Maakt de selectie achtergrond rood en de tekst wit */
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Skip to content link */
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 4.5rem;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+    z-index: 100;
+  }
+  
+.skip-link:focus {
+    transform: translateY(0%);
+}
+
+/* Navigatie */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    height: 4.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    width: 100vw;
+    background-color: white;
+    z-index: 2;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    margin-left: 0.5rem;
+    width: 3.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: var(--tran-03);
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 4.5rem;
+    min-width: 160px;
+    width: 100vw;
+    background-color: white;
+    height: calc(100dvh - 4.5rem);
+    overflow: scroll;
+    overflow-x: hidden;
+    z-index: 1000;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    height: 3rem;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+  
+.dropdown-content .bx {
+    display: flex;
+    align-items: center;
+    margin-right: var(--white-space-02);
+    font-size: 1.25rem;
+}
+  
+/* Zoekbalk navigatie */
+.search-nav {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.75rem 0.5rem;
+    height: 3rem;
+    background-color: var(--primary-color-light);
+    border-radius: var(--border-radius);
+}
+  
+.search-nav input {
+    font-size: var(--font-size-standard);
+    font-family: AvenirMedium, Arial;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color-light);  
+}
+
+/* Persoonsgegevens */
+.person {
+    display: flex;
+    align-items: center;
+}
+  
+.person img {
+    margin-right: var(--white-space-02);
+    width: 3.5rem;
+    border-radius: 50%;
+}
+  
+.person-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: var(--font-size-standard);
+    margin: 0 1rem;
+}
+
+.person-text p:nth-child(1) {
+    font-size: var(--font-size-standard);
+    font-weight: 600;
+}
+
+/* Dark mode */
+.mode {
+    display: flex;
+    margin: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    background-color: var(--primary-color-light);
+    transition: var(--tran-05);
+}
+
+.mode .sun-moon {
+    margin-right: 2.25rem;
+}
+
+/* Zorgt ervoor dat de zon en maan over elkaar heen staan 
+en niet onder elkaar */
+.mode .sun-moon i {
+    position: absolute;
+}
+
+/* Zorgt ervoor dat de zon onzichtbaar is op light mode,
+en de maan onzichtbaar op dark mode */
+.mode .sun-moon i.sun,
+body.dark .mode .sun-moon i.moon {
+    opacity: 0;
+}
+
+/* Zorgt ervoor dat de zon niét onzichtbaar is op dark mode= */
+body.dark .mode .sun-moon i.sun {
+    opacity: 1;
+}
+
+.bottom-content .toggle-switch {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    /* height: 100%; */
+}
+
+.toggle-switch .switch {
+    position: relative;
+    width: 40px;
+    height: 22px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+    transition: var(--tran-05);
+    cursor: pointer;
+}
+
+/* Zorgt ervoor dat de standaard checkbox styling niet te zien is */
+input.switch {
+    appearance: none;
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-04);
+}
+
+body.dark .switch::before {
+    left: 20px;
+} 
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    margin-top: 4.5rem;
+}
+
+.logo {
+    margin-bottom: var(--white-space-02);
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: var(--white-space);
+    font-size: 1.875rem;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+/* Zoekbalk main */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search {
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: var(--white-space);
+    padding: var(--padding-01);
+    border-radius: var(--border-radius);
+    background: white;
+}
+
+.search i {
+    margin-right: var(--white-space-02);
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.search input {
+    /* max-width: 100%; */
+    color: var(--text-color); 
+    font-size: var(--font-size-standard);
+    font-family: AvenirMedium, Arial;
+    outline: none;
+    border: none;
+}
+
+/* Sorteermenu & Leeslijstfuncties */
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-container button {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: var(--white-space);
+}
+
+.list-container button i {
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+form.sort,
+form.list {
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.list-container button,
+.sort select,
+.list select {
+    padding: var(--padding-01);
+    border-radius: var(--border-radius);
+    border: none;
+    font-family: AvenirMedium, Arial;
+    font-size: var(--font-size-standard);
+    color: var(--text-color);
+    background-color: white;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-01);
+    transition: var(--tran-03);
+}
+
+.sort label,
+.list label {
+    margin-right: 1rem;
+}
+
+/* Filters */
+
+.filters {
+    margin-bottom: var(--white-space);
+    text-align: center;
+}
+
+.filters button {
+    margin: 0 0.5rem 0.5rem 0;
+    padding: var(--padding-01);
+    border: none;
+    border-radius: var(--border-radius);
+    background: white;
+    font-family: AvenirMedium, Arial;
+    font-size: var(--font-size-standard);
+    color: var(--text-color);
+    box-shadow:  3px 3px 2px rgb(187, 187, 187);
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+/* Boekenlijst */
+
+.book {
+    text-align: center;
+    margin-bottom: var(--white-space);
+}
+
+.book img {
+    box-shadow: 5px 5px 5px rgb(204, 204, 204);
+    width: 180px;
+    height: 285px;
+    transition: var(--tran-03); 
+}
+
+.book h2 {
+    margin-top: var(--white-space-02);
+}
+
+.book p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.book .list-btn a { /* selecteert het 4de child van het article*/
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    margin-right: var(--white-space);
+    background: white;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-01);
+    transition: var(--tran-03);
+}
+
+.book .list-btn .add-list {
+    margin: 0;
+}
+
+/* Add & Delete button */
+.list-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.list-btn .add-list,
+.list-btn .delete-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+.list-btn .add-list {
+    margin-right: var(--white-space);
+    background: white;
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-01);
+}
+
+.list-btn .delete-btn {
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.list-btn i {
+    font-size: 2rem;
+}
+
+/* Popups info & auteur */
+
+/* Zorgt ervoor dat je niet kan scrollen terwijl je in de popup zit */
+body:has(.overlay:target) main {
+    overflow: hidden;
+    height: calc(100dvh - 4.5rem);
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.popup {
+  position: relative;
+  margin: 6em auto;
+  padding: 2em;
+  background: #fff;
+  border-radius: var(--border-radius);
+  width: 90%;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 200ms;
+}
+
+.book-recs {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.book-small {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    padding-right: 0.5rem;
+}
+
+.popup h2:nth-child(4) {
+    margin-top: var(--white-space-02);
+}
+
+.popup h2 {
+    margin-bottom: var(--white-space-02);
+}
+
+.book-small h3 {
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.book-small img {
+    width: 150px;
+}
+
+/* Leeslijstknop popup */
+.popup button {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem auto;
+    padding: 0.25rem 0.5rem;
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--body-color);
+    font-family: AvenirMedium, Arial;
+    font-size: var(--font-size-standard);
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-01);
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+.popup button i {
+    margin-right: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.popup button p:first-of-type {
+    margin-right: 0.5rem;
+}
+
+/* Recommendations */
+
+.rec-title {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.rec-title h2 {
+    margin-bottom: var(--white-space-02);
+    font-size: 1.875rem;
+}
+
+.recommendations { 
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.recommendations h3:first-child {
+    grid-column: 2/8;
+    grid-row: 1;
+    margin-bottom: var(--white-space-02);
+    text-align: center; 
+}
+
+.activity {
+    position: relative;
+    margin: 0 1rem;
+    /* display: grid;
+    justify-items: center; */
+}
+
+.recommendations img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.activity:first-of-type {
+    grid-column: 1/5;
+    grid-row: 2;
+    height: 80%;
+    filter: blur(3px);
+}
+
+.activity:nth-of-type(2) {
+    grid-column: 2/8;
+    grid-row: 2;
+    z-index: 1;
+}
+
+.activity:nth-of-type(3) {
+    grid-column: 5/9;
+    grid-row: 2;
+    height: 80%;
+    filter: blur(3px);
+}
+
+.activity h3 {
+    position: absolute;
+    bottom: 0.25rem;
+    width: 100%;
+}
+
+.activity h3 a {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: white;
+    border-radius: var(--border-radius);
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--text-color);
+    transition: 0.2s ease-in-out;
+}
+
+.recommendations button {
+    grid-row: 3;
+    grid-column: 4/6;
+    margin: 2rem auto;
+    padding: var(--padding-01);
+    border-radius: var(--border-radius);
+    border: none;
+    font-family: AvenirMedium, Arial;
+    font-size: var(--font-size-standard);
+    color: var(--text-color);
+    background-color: white;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-01);
+    transition: var(--tran-03);
+}
+
+/* Pagination */
+
+.page-container{
+    display:flex;
+    justify-content: center;
+    margin-bottom: var(--white-space);
+}
+
+.page-container ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.page-container li {
+    margin: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--border-radius);
+}
+
+.page-container li:nth-of-type(2) {
+    background: white;
+}
+
+/* Hovers, Focus & Links*/
+
+.sort select:focus,
+.list select:focus {
+    outline: auto;
+}
+
+.book img:hover {
+    translate: 0 -0.5rem;
+}
+
+.book a:nth-child(1):hover {
+    background-color: transparent;
+}
+
+.book a p:hover,
+.page-container li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.activity h3 a:active,
+.book .list-btn a:active {
+  background: green;
+  transition: 0s;
+}
+
+.book a,
+.activity a:link,
+.book a,
+.activity a:visited {
+  text-decoration: none;
+}
+
+.dropbtn:hover, 
+.dropbtn:focus,
+.dropdown-content a:hover,
+.dropdown-content a:focus,
+.filters button:hover,
+.filters button:focus,
+.list-container button:hover,
+.list-container button:focus,
+.list-btn button:first-of-type:hover,
+.list-btn button:first-of-type:focus,
+.activity h3 a:hover,
+.activity h3 a:focus,
+.recommendations button:hover,
+.recommendations button:focus,
+.book .list-btn a:hover,
+.book .list-btn a:focus,
+.popup button:hover,
+.popup button:focus {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Dark mode */
+
+body.dark .popup button {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+body.dark nav,
+body.dark .dropdown-content,
+body.dark .popup {
+    background-color: var(--sidebar-color);
+}
+
+body.dark .dropbtn,
+body.dark .search-nav i {
+    color: var(--text-color);
+}
+
+body.dark .search i,
+body.dark .filters button,
+body.dark .list-container button,
+body.dark .sort select,
+body.dark .list select,
+body.dark .list-btn button:first-of-type,
+body.dark .book a,
+body.dark .activity h3 a,
+body.dark .recommendations button,
+body.dark .book img,
+body.dark .page-container li:nth-of-type(2) {
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+body.dark .close,
+body.dark .bxs-trash {
+    color: #EB0000;
+}
+
+body.dark .skip-link,
+body.dark .filters button:hover,
+body.dark .filters button:focus,
+body.dark .popup button:hover,
+body.dark .popup button:focus,
+body.dark .list-container button:hover, /* Van leeslijst pagina */
+body.dark .list-container button:focus, /* Van leeslijst pagina */
+body.dark .list-btn button:first-of-type:hover, /* Van leeslijst pagina */
+body.dark .list-btn button:first-of-type:focus, /* Van leeslijst pagina */
+body.dark .activity h3 a:hover,
+body.dark .activity h3 a:focus,
+body.dark .recommendations button:hover,
+body.dark .recommendations button:focus,
+body.dark .book .list-btn a:hover,
+body.dark .book .list-btn a:focus {
+  background: #EB0000;
+  color: white;
+}
+
+body.dark .overlay {
+    background: rgb(255 255 255 / 42%);
+}
+
+/* Media queries */
+
+@media (min-width: 30rem){ /* media-query voor aanbevolen activiteiten klein scherm */
+    .activity {
+        margin: 0;
+    }
+
+    .activity:first-of-type {
+        grid-column: 2/5;
+    }
+
+    .activity:nth-of-type(2) {
+        grid-column: 3/7;
+    }
+
+    .activity:nth-of-type(3) {
+        grid-column: 5/8;
+    }
+}
+
+@media (min-width: 39rem){
+    .book-recs {
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 47rem) {
+    .person-text p:nth-child(1) {
+        font-size: 1.125rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        text-align: start;
+    }
+
+    h1 {
+        text-align: start;
+    }
+
+    .search-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .search {
+        margin: 0;
+        margin-bottom: var(--white-space);
+        max-width: 15rem;
+    }
+
+    form.sort,
+    form.list,
+    .list-container button { /* Van leeslijst pagina */
+        margin: 0;
+        margin-bottom: var(--white-space);
+    }
+
+    .list-container { /* Van leeslijst pagina */
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    form.list { /* Van leeslijst pagina */
+        margin-right: var(--white-space-02);
+    }
+
+    .list-btn { /* Van leeslijst pagina */
+        justify-content: space-between;
+        margin-right: 3rem;
+    }
+
+    .list-btn button:first-of-type {  /* Van leeslijst pagina */
+        margin:0;
+    }
+
+    .filters {
+        text-align: start;
+    }
+
+    .popup {
+        width: 60%;
+    }
+
+    .book-recs {
+        overflow-x: hidden;
+    }
+
+    .book {
+        display: flex;
+        flex-flow: column;
+        align-items: start;
+        justify-content: space-between;
+        text-align: start;
+        margin: 0 3rem 2rem 0;
+    }
+
+    .book-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        padding-left: 1rem;
+        margin-bottom: var(--white-space);
+        gap: 1rem;
+    }
+
+    .book .list-btn .add-list {
+        margin-right: var(--white-space);
+    }
+
+    .rec-title {
+        display: flex;
+        align-items: center;
+        text-align: start;
+    }
+
+    .rec-title img {
+        margin: 0 4rem 0 4rem;
+    }
+
+    .dropdown-content {
+        width: 16rem;
+        overflow: auto;
+      }
+
+      .bottom-content {
+        width: 100%;
+      }
+}
+
+@media (min-width: 65rem){ /* media-query voor aanbevolen activiteiten groot scherm */
+    .recommendations {
+        grid-template-columns: repeat(14, 1fr);
+        margin-bottom: var(--white-space);
+    }
+
+    .recommendations h3:first-child {
+        grid-column: 6/10;
+        /* text-align: start; */
+    }
+
+    .activity:first-of-type {
+        grid-column: 4/8;
+    }
+
+    .activity:nth-of-type(2) {
+        grid-column: 6/10;
+    }
+
+    .activity:nth-of-type(3) {
+        grid-column: 8/12;
+    }
+
+    .recommendations button {
+        grid-row: 3;
+        grid-column: 7/9;
+    }
+}
+
+@media (min-width: 75rem) {
+    .popup {
+        width: 40%;
+    }
+}
