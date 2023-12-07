@@ -345,12 +345,12 @@ h1 {
 
 /* Sorteermenu & Leeslijstfuncties */
 
-.list-container {
+.list-container { /* Om de lijst functies te positioneren */
     display: flex;
     flex-direction: column;
 }
 
-.list-container button {
+.list-container button { /* "Nieuwe lijst" knop */
     display: flex;
     align-items: center;
     margin: auto;
@@ -432,7 +432,7 @@ form.list {
     color: var(--text-color);
 }
 
-.book .btn-container a { 
+.book .btn-container a { /* Info knop */
     display: flex;
     align-items: center;
     padding: 0.5rem 2rem;
@@ -444,20 +444,19 @@ form.list {
     transition: var(--tran-03);
 }
 
-.book .btn-container .add-list {
+.book .btn-container .add-list { /* Toevoegen knop homepage geschiedenis/leeslijst */
     margin: 0;
 }
 
-/* Add & Delete button */
+/* Container voor de 2 knoppen onder de boeken voor elke pagina */
+
 .btn-container {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.book-recs .btn-container {
-    align-items: center;
-}
+/* Add & delete button */
 
 .btn-container .add-list,
 .btn-container .delete-btn {
@@ -471,16 +470,11 @@ form.list {
     transition: var(--tran-03);
 }
 
-.btn-container .add-list {
+.btn-container .add-list { /* Algemene styling toevoegen knop */
     margin-right: var(--white-space);
-    /* margin-bottom: 0.5rem; */
     background: white;
     color: var(--text-color);
     box-shadow: var(--box-shadow-01);
-}
-
-.book-recs .add-list {
-    background: var(--body-color);
 }
 
 .btn-container .delete-btn {
@@ -544,13 +538,6 @@ body:has(.overlay:target) main {
     padding-bottom: 0.25rem;
 }
 
-.book-small {
-    display: flex;
-    flex-direction: column;
-    scroll-snap-align: center;
-    padding-right: 0.5rem;
-}
-
 .popup h2:nth-child(4) {
     margin-top: var(--white-space-02);
 }
@@ -559,43 +546,30 @@ body:has(.overlay:target) main {
     margin-bottom: var(--white-space-02);
 }
 
-.book-small h3 {
-    padding-left: 1rem;
-    margin-right: var(--white-space);
-    font-size: 1.2rem;
+.book-small {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    padding-right: 0.5rem;
 }
 
 .book-small img {
     width: 150px;
 }
 
-/* Leeslijstknop popup */
-/* .popup button {
-    display: flex;
+.book-recs .btn-container {
     align-items: center;
-    margin: 0.5rem auto;
-    padding: 0.25rem 0.5rem;
-    max-width: 100%;
-    border-radius: var(--border-radius);
-    border: none;
-    background-color: var(--body-color);
-    font-family: AvenirMedium, Arial;
-    font-size: var(--font-size-standard);
-    color: var(--text-color);
-    box-shadow: var(--box-shadow-01);
-    cursor: pointer;
-    transition: var(--tran-03);
 }
 
-.popup button i {
-    margin-right: 0.25rem;
-    font-size: 1.25rem;
-    font-weight: bold;
+.book-recs .add-list {
+    background: var(--body-color);
 }
 
-.popup button p:first-of-type {
-    margin-right: 0.5rem;
-} */
+.book-small h3 {
+    padding-left: 1rem;
+    margin-right: var(--white-space);
+    font-size: 1.2rem;
+}
 
 /* Recommendations */
 
@@ -627,8 +601,6 @@ body:has(.overlay:target) main {
 .activity {
     position: relative;
     margin: 0 1rem;
-    /* display: grid;
-    justify-items: center; */
 }
 
 .recommendations img {
