@@ -432,7 +432,7 @@ form.list {
     color: var(--text-color);
 }
 
-.book .list-btn a { /* selecteert het 4de child van het article*/
+.book .btn-container a { 
     display: flex;
     align-items: center;
     padding: 0.5rem 2rem;
@@ -444,19 +444,23 @@ form.list {
     transition: var(--tran-03);
 }
 
-.book .list-btn .add-list {
+.book .btn-container .add-list {
     margin: 0;
 }
 
 /* Add & Delete button */
-.list-btn {
+.btn-container {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.list-btn .add-list,
-.list-btn .delete-btn {
+.book-recs .btn-container {
+    align-items: center;
+}
+
+.btn-container .add-list,
+.btn-container .delete-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -467,19 +471,24 @@ form.list {
     transition: var(--tran-03);
 }
 
-.list-btn .add-list {
+.btn-container .add-list {
     margin-right: var(--white-space);
+    /* margin-bottom: 0.5rem; */
     background: white;
     color: var(--text-color);
     box-shadow: var(--box-shadow-01);
 }
 
-.list-btn .delete-btn {
+.book-recs .add-list {
+    background: var(--body-color);
+}
+
+.btn-container .delete-btn {
     background: transparent;
     color: var(--primary-color);
 }
 
-.list-btn i {
+.btn-container i {
     font-size: 2rem;
 }
 
@@ -532,6 +541,7 @@ body:has(.overlay:target) main {
     overflow: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
+    padding-bottom: 0.25rem;
 }
 
 .book-small {
@@ -551,6 +561,7 @@ body:has(.overlay:target) main {
 
 .book-small h3 {
     padding-left: 1rem;
+    margin-right: var(--white-space);
     font-size: 1.2rem;
 }
 
@@ -559,7 +570,7 @@ body:has(.overlay:target) main {
 }
 
 /* Leeslijstknop popup */
-.popup button {
+/* .popup button {
     display: flex;
     align-items: center;
     margin: 0.5rem auto;
@@ -584,7 +595,7 @@ body:has(.overlay:target) main {
 
 .popup button p:first-of-type {
     margin-right: 0.5rem;
-}
+} */
 
 /* Recommendations */
 
@@ -733,7 +744,7 @@ body:has(.overlay:target) main {
 }
 
 .activity h3 a:active,
-.book .list-btn a:active {
+.book .btn-container a:active {
   background: green;
   transition: 0s;
 }
@@ -753,14 +764,14 @@ body:has(.overlay:target) main {
 .filters button:focus,
 .list-container button:hover,
 .list-container button:focus,
-.list-btn button:first-of-type:hover,
-.list-btn button:first-of-type:focus,
+.btn-container button:first-of-type:hover,
+.btn-container button:first-of-type:focus,
 .activity h3 a:hover,
 .activity h3 a:focus,
 .recommendations button:hover,
 .recommendations button:focus,
-.book .list-btn a:hover,
-.book .list-btn a:focus,
+.book .btn-container a:hover,
+.book .btn-container a:focus,
 .popup button:hover,
 .popup button:focus {
   background: var(--primary-color);
@@ -791,7 +802,7 @@ body.dark .filters button,
 body.dark .list-container button,
 body.dark .sort select,
 body.dark .list select,
-body.dark .list-btn button:first-of-type,
+body.dark .btn-container button:first-of-type,
 body.dark .book a,
 body.dark .activity h3 a,
 body.dark .recommendations button,
@@ -813,14 +824,14 @@ body.dark .popup button:hover,
 body.dark .popup button:focus,
 body.dark .list-container button:hover, /* Van leeslijst pagina */
 body.dark .list-container button:focus, /* Van leeslijst pagina */
-body.dark .list-btn button:first-of-type:hover, /* Van leeslijst pagina */
-body.dark .list-btn button:first-of-type:focus, /* Van leeslijst pagina */
+body.dark .btn-container button:first-of-type:hover, /* Van leeslijst pagina */
+body.dark .btn-container button:first-of-type:focus, /* Van leeslijst pagina */
 body.dark .activity h3 a:hover,
 body.dark .activity h3 a:focus,
 body.dark .recommendations button:hover,
 body.dark .recommendations button:focus,
-body.dark .book .list-btn a:hover,
-body.dark .book .list-btn a:focus {
+body.dark .book .btn-container a:hover,
+body.dark .book .btn-container a:focus {
   background: #EB0000;
   color: white;
 }
@@ -964,12 +975,12 @@ body.dark .overlay {
         margin-right: var(--white-space-02);
     }
 
-    .list-btn { /* Van leeslijst pagina */
+    .btn-container {
         justify-content: space-between;
         margin-right: 3rem;
     }
 
-    .list-btn button:first-of-type {  /* Van leeslijst pagina */
+    .btn-container button:first-of-type {  /* Van leeslijst pagina */
         margin:0;
     }
 
@@ -994,6 +1005,10 @@ body.dark .overlay {
         margin: 0 3rem 2rem 0;
     }
 
+    .book-small h3 {
+        margin: 0;
+    }
+
     .book-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -1002,7 +1017,7 @@ body.dark .overlay {
         gap: 1rem;
     }
 
-    .book .list-btn .add-list {
+    .book .btn-container .add-list {
         margin-right: var(--white-space);
     }
 
