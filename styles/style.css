@@ -866,8 +866,14 @@ body.dark .overlay {
     box-shadow: var(--box-shadow-01);
     font-family: AvenirMedium, Arial;
     font-size: var(--font-size-standard);
+    color: var(--text-color);
     cursor: pointer;
     transition: var(--tran-03);
+}
+
+.warning-buttons button:first-of-type {
+    color: white;
+    background-color: var(--primary-color);
 }
 
 .dialog-success {
@@ -877,13 +883,13 @@ body.dark .overlay {
 
 .dialog-success button {
     margin-left: var(--white-space-02);
-    appearance: none;
     height: auto;
     border: none;
     background: none;
     color: var(--primary-color);
     font-size: 2.5rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 /* Media queries */
