@@ -56,7 +56,7 @@ const dialog = document.querySelector("dialog"); // hiermee selecteer ik de eers
 const closeButton = document.getElementById("popup-close"); // hiermee selecteer ik de knop met "nee, annuleren" om uit de eerste popup te gaan
 const deleteButton = document.getElementById("popup-delete"); // hiermee selecteer ik de knop met "ja, verwijderen" om naar de volgende popup te gaan
 const dialogSuccess = document.getElementById("dialog-success"); // hiermee selecteer ik de volgende popup/dialog (succes melding)
-const closeButtonSuccess = document.getElementById("success-close"); // hiermee selecteer ik het kruisje om uit de popup te gaan
+const closeButtonSuccess = document.getElementById("close"); // hiermee selecteer ik het kruisje om uit de popup te gaan
 
 
 // Openen waarchuwing popup

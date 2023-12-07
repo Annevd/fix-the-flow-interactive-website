@@ -26,10 +26,12 @@
     /* Colors */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
-    --primary-color: /*#FF0000*/ #EB0000;
+    --brand-color: #EB0000;
+    --primary-color: #2C8EC2;
     --primary-color-light: #F6F5FF;
+    --secundary-color: #2A9077;
     --toggle-color: #DDD;
-    --text-color: /*#707070*/ #3a3b3c;
+    --text-color: #3a3b3c;
 
     /* Font */
     --font-size-standard: 1rem;
@@ -57,7 +59,9 @@ body.dark {
     --body-color: #18191a;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;
+    --primary-color-darkmode: #2C8EC2;
     --primary-color-light: #3a3b3c;
+    --secundary-color: #2A9077;
     --toggle-color: #fff;
     --text-color: #ccc;
 }
@@ -88,7 +92,7 @@ body.dont-scroll {
     left: 4.5rem;
     padding: 0.5rem;
     border-radius: var(--border-radius);
-    background: var(--primary-color);
+    background: var(--brand-color);
     color: #fff;
     font-weight: 700;
     text-align: center;
@@ -125,7 +129,7 @@ nav {
     background-color: transparent;
     font-size: 2rem;
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--text-color);
     transition: var(--tran-03);
 }
   
@@ -479,7 +483,7 @@ form.list {
 
 .btn-container .delete-btn {
     background: transparent;
-    color: var(--primary-color);
+    color: var(--brand-color);
 }
 
 .btn-container i {
@@ -526,7 +530,7 @@ body:has(.overlay:target) main {
   font-size: 40px;
   font-weight: bold;
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--brand-color);
   transition: all 200ms;
 }
 
@@ -536,6 +540,7 @@ body:has(.overlay:target) main {
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     padding-bottom: 0.25rem;
+    margin-bottom: var(--white-space-02);
 }
 
 .popup h2:nth-child(4) {
@@ -561,15 +566,28 @@ body:has(.overlay:target) main {
     align-items: center;
 }
 
-.book-recs .add-list {
-    background: var(--body-color);
-}
-
 .book-small h3 {
     padding-left: 1rem;
     margin-right: var(--white-space);
     font-size: 1.2rem;
 }
+
+.book-recs .add-list {
+    background: var(--body-color);
+}
+
+.popup p:last-of-type {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.popup p:last-of-type span {
+    background: var(--body-color);
+    padding: 0 0.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-01);
+}
+
 
 /* Recommendations */
 
@@ -666,6 +684,13 @@ body:has(.overlay:target) main {
     transition: var(--tran-03);
 }
 
+.book a,
+.activity a:link,
+.book a,
+.activity a:visited {
+  text-decoration: none;
+}
+
 /* Pagination */
 
 .page-container{
@@ -692,124 +717,6 @@ body:has(.overlay:target) main {
 
 .page-container li:nth-of-type(2) {
     background: white;
-}
-
-/* Hovers, Focus & Links*/
-
-.sort select:focus,
-.list select:focus {
-    outline: auto;
-}
-
-.book img:hover {
-    translate: 0 -0.5rem;
-}
-
-.book a:nth-child(1):hover {
-    background-color: transparent;
-}
-
-.book a p:hover,
-.page-container li:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.activity h3 a:active,
-.book .btn-container a:active {
-  background: green;
-  transition: 0s;
-}
-
-.book a,
-.activity a:link,
-.book a,
-.activity a:visited {
-  text-decoration: none;
-}
-
-.dropbtn:hover, 
-.dropbtn:focus,
-.dropdown-content a:hover,
-.dropdown-content a:focus,
-.filters button:hover,
-.filters button:focus,
-.list-container button:hover,
-.list-container button:focus,
-.btn-container button:first-of-type:hover,
-.btn-container button:first-of-type:focus,
-.activity h3 a:hover,
-.activity h3 a:focus,
-.recommendations button:hover,
-.recommendations button:focus,
-.book .btn-container a:hover,
-.book .btn-container a:focus,
-.popup button:hover,
-.popup button:focus {
-  background: var(--primary-color);
-  color: white;
-}
-
-/* Dark mode */
-
-body.dark .popup button {
-    background: white;
-    color: var(--primary-color);
-    box-shadow: none;
-}
-
-body.dark nav,
-body.dark .dropdown-content,
-body.dark .popup {
-    background-color: var(--sidebar-color);
-}
-
-body.dark .dropbtn,
-body.dark .search-nav i {
-    color: var(--text-color);
-}
-
-body.dark .search i,
-body.dark .filters button,
-body.dark .list-container button,
-body.dark .sort select,
-body.dark .list select,
-body.dark .btn-container button:first-of-type,
-body.dark .book a,
-body.dark .activity h3 a,
-body.dark .recommendations button,
-body.dark .book img,
-body.dark .page-container li:nth-of-type(2) {
-  color: var(--primary-color);
-  box-shadow: none;
-}
-
-body.dark .close,
-body.dark .bxs-trash {
-    color: #EB0000;
-}
-
-body.dark .skip-link,
-body.dark .filters button:hover,
-body.dark .filters button:focus,
-body.dark .popup button:hover,
-body.dark .popup button:focus,
-body.dark .list-container button:hover, /* Van leeslijst pagina */
-body.dark .list-container button:focus, /* Van leeslijst pagina */
-body.dark .btn-container button:first-of-type:hover, /* Van leeslijst pagina */
-body.dark .btn-container button:first-of-type:focus, /* Van leeslijst pagina */
-body.dark .activity h3 a:hover,
-body.dark .activity h3 a:focus,
-body.dark .recommendations button:hover,
-body.dark .recommendations button:focus,
-body.dark .book .btn-container a:hover,
-body.dark .book .btn-container a:focus {
-  background: #EB0000;
-  color: white;
-}
-
-body.dark .overlay {
-    background: rgb(255 255 255 / 42%);
 }
 
 /* Javascript warning popup */
@@ -856,7 +763,7 @@ body.dark .overlay {
 
 .warning-buttons button:first-of-type {
     color: white;
-    background-color: var(--primary-color);
+    background-color: var(--brand-color);
 }
 
 .dialog-success {
@@ -864,15 +771,149 @@ body.dark .overlay {
     align-items: center;
 }
 
-.dialog-success button {
+.close {
     margin-left: var(--white-space-02);
     height: auto;
     border: none;
     background: none;
-    color: var(--primary-color);
+    color: var(--brand-color);
     font-size: 2.5rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+/* Hovers, Focus & Links*/
+
+.sort select:focus,
+.list select:focus {
+    outline: auto;
+}
+
+.book img:hover {
+    translate: 0 -0.5rem;
+}
+
+.delete-btn:hover {
+    transform: scale(1.15);
+}
+
+.book a:nth-child(1):hover {
+    background-color: transparent;
+}
+
+.book a p:hover,
+.page-container li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.activity h3 a:active,
+.book .btn-container a:active {
+  background: green;
+  transition: 0s;
+}
+
+.warning-buttons button:last-of-type:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.warning-buttons button:first-of-type:hover {
+    translate: 0 -0.2rem;
+}
+
+.filters button:hover,
+.filters button:focus,
+.list-container button:hover,
+.list-container button:focus {
+    background: var(--secundary-color);
+    color: white;
+}
+
+.dropbtn:hover, 
+.dropbtn:focus,
+.dropdown-content a:hover,
+.dropdown-content a:focus,
+.btn-container button:first-of-type:hover,
+.btn-container button:first-of-type:focus,
+.activity h3 a:hover,
+.activity h3 a:focus,
+.recommendations button:hover,
+.recommendations button:focus,
+.book .btn-container a:hover,
+.book .btn-container a:focus,
+.popup button:hover,
+.popup button:focus {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Dark mode */
+
+body.dark .popup button {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+body.dark nav,
+body.dark .dropdown-content,
+body.dark .popup {
+    background-color: var(--sidebar-color);
+}
+
+body.dark .dropbtn,
+body.dark .search-nav i {
+    color: var(--text-color);
+}
+
+body.dark .warning-buttons button:nth-of-type(2):hover,
+body.dark .warning-buttons button:nth-of-type(2):focus {
+    background: var(--text-color);
+    color: var(--body-color);
+}
+
+body.dark .search i,
+body.dark .filters button,
+body.dark .list-container button,
+body.dark .sort select,
+body.dark .list select,
+body.dark .btn-container button:first-of-type,
+body.dark .book a,
+body.dark .activity h3 a,
+body.dark .recommendations button,
+body.dark .book img,
+body.dark .page-container li:nth-of-type(2) {
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+body.dark .list-container button:hover,
+body.dark .list-container button:focus,
+body.dark .filters button:hover,
+body.dark .filters button:focus {
+    background: var(--secundary-color);
+    color: white;
+}
+
+body.dark .skip-link,
+body.dark .popup button:hover,
+body.dark .popup button:focus,
+body.dark .btn-container button:first-of-type:hover, /* Van leeslijst pagina */
+body.dark .btn-container button:first-of-type:focus, /* Van leeslijst pagina */
+body.dark .activity h3 a:hover,
+body.dark .activity h3 a:focus,
+body.dark .recommendations button:hover,
+body.dark .recommendations button:focus,
+body.dark .book .btn-container a:hover,
+body.dark .book .btn-container a:focus {
+  background: var(--primary-color-darkmode);
+  color: white;
+}
+
+body.dark .overlay,
+body.dark ::backdrop {
+    background: rgb(255 255 255 / 42%);
 }
 
 /* Media queries */
