@@ -77,10 +77,10 @@ closeButton.addEventListener("click", () => {
 deleteButton.addEventListener("click", () => {
   dialog.close();
   dialogSuccess.showModal();
-} )
+});
 
 // Sluit de succes melding als de gebruiker op het kruisje klikt
 closeButtonSuccess.addEventListener("click", () => {
   dialogSuccess.close();
   document.querySelector("body").classList.remove("dont-scroll"); // verwijderd de classlist zodat je weer kan scrollen
-})
+});
