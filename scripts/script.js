@@ -51,8 +51,11 @@ modeSwitch.addEventListener("click" , () =>{
 
 // => : shorthand om een functie te definiëren (bijv. in plaats van .. function() )
 
-const showButton = document.querySelectorAll(".delete-btn"); // hiermee selecteer ik alle 6 buttons
+const showButtonArray = document.querySelectorAll(".delete-btn"); // hiermee selecteer ik alle 6 buttons
+// console.log("showButton",showButton);
+// console.log(showButton[1]);
 const dialog = document.querySelector("dialog"); // hiermee selecteer ik de eerste popup/dialog
+// console.log(dialog);
 const closeButton = document.getElementById("popup-close"); // hiermee selecteer ik de knop met "nee, annuleren" om uit de eerste popup te gaan
 const deleteButton = document.getElementById("popup-delete"); // hiermee selecteer ik de knop met "ja, verwijderen" om naar de volgende popup te gaan
 const dialogSuccess = document.getElementById("dialog-success"); // hiermee selecteer ik de volgende popup/dialog (succes melding)
@@ -60,7 +63,7 @@ const closeButtonSuccess = document.getElementById("close"); // hiermee selectee
 
 
 // Openen waarchuwing popup
-showButton.forEach((button) => // forEach zorgt ervoor dat hij door elke button met de class .delete-btn loopt zodat je op alle 6 prullenbakjes kan klikken
+showButtonArray.forEach((button) => // forEach zorgt ervoor dat hij door elke button met de class .delete-btn loopt zodat je op alle 6 prullenbakjes kan klikken
 button.addEventListener("click", () => {
   dialog.showModal(); //opent de popup als je op de prullenbak klikt
   document.querySelector("body").classList.add("dont-scroll"); //toggled de class dat ervoor zorgt dat je in de popup niet kan scrollen
