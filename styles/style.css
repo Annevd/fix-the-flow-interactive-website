@@ -307,7 +307,8 @@ main {
 }
 
 .go-back {
-    margin: 0 auto var(--white-space-02) 0;
+    text-align: center;
+    margin-bottom: var(--white-space-02);
     text-decoration: none;
     color: var(--text-color);
     font-family: AvenirMedium, Arial;
@@ -764,6 +765,7 @@ button.homepage-btn {
 
 .rec-heading {
     text-align: center;
+    margin: 0 0.5rem;
     font-size: 1.875rem;
     margin-bottom: var(--white-space);
 }
@@ -1022,6 +1024,10 @@ body.dark ::backdrop {
 
     .logo {
         text-align: start;
+    }
+
+    .go-back {
+        margin: 0 auto var(--white-space-02) 0;
     }
 
     h1 {
