@@ -27,7 +27,7 @@
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
     --brand-color: #EB0000;
-    --primary-color: #2C8EC2;
+    --primary-color: #267AA6;
     --primary-color-light: #F6F5FF;
     --secundary-color: #2A9077;
     --toggle-color: #DDD;
@@ -304,6 +304,14 @@ main {
     margin-bottom: var(--white-space-02);
     margin-top: 1.5rem;
     text-align: center;
+}
+
+.go-back {
+    margin: 0 auto var(--white-space-02) 0;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: AvenirMedium, Arial;
+    font-size: 1.1rem;   
 }
 
 h1 {
@@ -719,6 +727,47 @@ body:has(.overlay:target) main {
     background: white;
 }
 
+/* Leeslijst homepagina */
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--white-space);
+    gap: var(--white-space-02);
+}
+
+.homepage-btn {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem 0;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-01);
+    width: 80%;
+    background: white;
+    font-family: AvenirMedium, Arial;
+    font-size: var(--font-size-standard);
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+button.homepage-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--white-space-02);
+    background: var(--primary-color);
+    color: white;
+}
+
+.rec-heading {
+    text-align: center;
+    font-size: 1.875rem;
+    margin-bottom: var(--white-space);
+}
+
 /* Javascript warning popup */
 
 .warning-overlay {
@@ -822,6 +871,10 @@ body:has(.overlay:target) main {
     translate: 0 -0.2rem;
 }
 
+button.homepage-btn:active {
+    translate: 0 0.2rem;
+}
+
 .filters button:hover,
 .filters button:focus,
 .list-container button:hover,
@@ -842,6 +895,8 @@ body:has(.overlay:target) main {
 .recommendations button:focus,
 .book .btn-container a:hover,
 .book .btn-container a:focus,
+.homepage-btn:hover,
+.homepage-btn:focus,
 .popup button:hover,
 .popup button:focus {
   background: var(--primary-color);
@@ -867,10 +922,15 @@ body.dark .search-nav i {
     color: var(--text-color);
 }
 
-body.dark .warning-buttons button:nth-of-type(2):hover,
-body.dark .warning-buttons button:nth-of-type(2):focus {
-    background: var(--text-color);
-    color: var(--body-color);
+body.dark .homepage-btn {
+    box-shadow: none;
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+body.dark button.homepage-btn {
+    color: white;
+    background: var(--primary-color-darkmode);
 }
 
 body.dark .search i,
@@ -886,6 +946,12 @@ body.dark .book img,
 body.dark .page-container li:nth-of-type(2) {
   color: var(--primary-color);
   box-shadow: none;
+}
+
+body.dark .warning-buttons button:nth-of-type(2):hover,
+body.dark .warning-buttons button:nth-of-type(2):focus {
+    background: var(--text-color);
+    color: var(--body-color);
 }
 
 body.dark .list-container button:hover,
@@ -906,7 +972,9 @@ body.dark .activity h3 a:focus,
 body.dark .recommendations button:hover,
 body.dark .recommendations button:focus,
 body.dark .book .btn-container a:hover,
-body.dark .book .btn-container a:focus {
+body.dark .book .btn-container a:focus,
+body.dark .homepage-btn:hover,
+body.dark .homepage-btn:focus {
   background: var(--primary-color-darkmode);
   color: white;
 }
@@ -1047,11 +1115,26 @@ body.dark ::backdrop {
     .dropdown-content {
         width: 16rem;
         overflow: auto;
-      }
+    }
 
-      .bottom-content {
+    .bottom-content {
         width: 100%;
-      }
+    }
+
+    .homepage-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: var(--white-space);
+    }
+
+    .homepage-btn {
+        width: 95%;
+    }
+
+    .rec-heading {
+        text-align: start;
+    }
 }
 
 @media (min-width: 65rem){ /* media-query voor aanbevolen activiteiten groot scherm */

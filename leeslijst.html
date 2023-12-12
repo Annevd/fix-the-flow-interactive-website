@@ -35,7 +35,7 @@
                             class='bx bx-home'></i>Welkom</a>
                     <a href="https://pommelienn.github.io/the-client-website/"><i class='bx bx-user'></i>Overzicht
                         abonnementen</a>
-                    <a href="leeslijst.html"><i class='bx bx-list-ul'></i>Leeslijst</a>
+                    <a href="leeslijst-home.html"><i class='bx bx-list-ul'></i>Leeslijst</a>
                     <a href="https://wingsvn.github.io/the-client-website/uitleningen.html"><i
                             class='bx bx-bar-chart-alt-2'></i>Uitleningen en verlengen</a>
                     <a href="index.html"><i class='bx bx-bell'></i>Uitleengeschiedenis</a>
@@ -73,436 +73,439 @@
             </div>
         </nav>
     </header>
+
+
+    <main id="main">
+
+        <div class="logo"><img src="./images/oba_20.png" alt=""></div>
+
+        <a href="leeslijst-home.html" class="go-back">&#8592; Terug naar mijn lijsten</a>
+
+        <h1>Lijst 1</h1>
+
+        <!-- Zoekbalk -->
+
+        <div class="search-container"> <!-- om zoekbalk en sorteermenu te positioneren -->
+            <form class="search">
+                <i class="bx bx-search"></i>
+                <input type="text" placeholder="Zoek..." name="search">
+            </form>
+
+            <!-- Sorteermenu -->
+
+            <form class="sort">
+                <label for="sort">Sorteer op</label>
+                <select name="sort" id="sort">
+                    <option value="popular">Populariteit</option>
+                    <option value="new-old">Nieuw/oud</option>
+                    <option value="old-new">Oud/nieuw</option>
+                    <option value="a-z">A-Z</option>
+                    <option value="z-a">Z-A</option>
+                </select>
+            </form>
+        </div>
+
+        <!-- Lijst dropdown -->
+
+        <div class="list-container"> <!-- Om de lijst functies te positioneren -->
+            <form class="list">
+                <label for="list">Mijn lijsten</label>
+                <select name="list" id="list">
+                    <option value="list-1">Lijst 1</option>
+                    <option value="list-2">Lijst 2</option>
+                    <option value="list-3">Lijst 3</option>
+                    <option value="list-4">Lijst 4</option>
+                </select>
+            </form>
+
+            <button>
+                <i class='bx bx-plus'></i>
+                <p>Nieuwe Lijst</p>
+            </button>
+
+        </div>
+
+        <!-- Boekenlijst -->
+
+        <section class="book-list">
+            <article class="book">
+                <a href="https://zoeken.oba.nl/detail/Isabel-Allende/Violeta/Boek/?itemid=%7Coba-catalogus%7C1254553"><img
+                        src="./images/books/boek7.jpeg" alt="Uitleenpagina"></a>
+                <h2>Violeta</h2>
+                <a href="#popup1-auteur">
+                    <p>Isabel Allende</p>
+                </a>
+                <div class="btn-container">
+                    <button class="add-list">
+                        <i class='bx bx-plus'></i>
+                    </button>
+                    <button class="delete-btn">
+                        <i class='bx bxs-trash'></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="book">
+                <a
+                    href="https://zoeken.oba.nl/detail/Kelly-Weekers/De-kracht-van-keuze-de-vragen-die-ik-mijzelf/Boek/?itemid=%7Coba-catalogus%7C1256986"><img
+                        src="./images/books/boek8.jpg" alt="Uitleenpagina"></a>
+                <h2>De kracht van keuze</h2>
+                <a href="#popup2-auteur">
+                    <p>Kelly Weekers</p>
+                </a>
+                <div class="btn-container">
+                    <button class="add-list">
+                        <i class='bx bx-plus'></i>
+                    </button>
+                    <button class="delete-btn">
+                        <i class='bx bxs-trash'></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="book">
+                <a href="https://zoeken.oba.nl/detail/Stephen-King/Fairy-tale/Boek/?itemid=%7Coba-catalogus%7C1259739"><img
+                        src="./images/books/boek9.jpeg" alt="Uitleenpagina"></a>
+                <h2>Fairy tale</h2>
+                <a href="#popup3-auteur">
+                    <p>Stephen King</p>
+                </a>
+                <div class="btn-container">
+                    <button class="add-list">
+                        <i class='bx bx-plus'></i>
+                    </button>
+                    <button class="delete-btn">
+                        <i class='bx bxs-trash'></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="book">
+                <a
+                    href="https://zoeken.oba.nl/detail/Raynor-Winn/Het-zoutpad-over-oude-wegen-naar-een-nieuw/Boek/?itemid=%7Coba-catalogus%7C1241638"><img
+                        src="./images/books/boek10.jpg" alt="Uitleenpagina"></a>
+                <h2>Het zoutpad</h2>
+                <a href="#popup4-auteur">
+                    <p>Raynor Winn</p>
+                </a>
+                <div class="btn-container">
+                    <button class="add-list">
+                        <i class='bx bx-plus'></i>
+                    </button>
+                    <button class="delete-btn">
+                        <i class='bx bxs-trash'></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="book">
+                <a
+                    href="https://zoeken.oba.nl/detail/Arthur-Japin/Wat-stilte-wil-roman/Boek/?itemid=%7Coba-catalogus%7C1259690"><img
+                        src="./images/books/boek11.jpeg" alt="Uitleenpagina"></a>
+                <h2>Wat stilte wil</h2>
+                <a href="#popup5-auteur">
+                    <p>Arthur Japin</p>
+                </a>
+                <div class="btn-container">
+                    <button class="add-list">
+                        <i class='bx bx-plus'></i>
+                    </button>
+                    <button class="delete-btn">
+                        <i class='bx bxs-trash'></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="book">
+                <a href="https://zoeken.oba.nl/detail/Anya-Niewierra/De-Camino/Boek/?itemid=%7Coba-catalogus%7C1242337"><img
+                        src="./images/books/boek12.jpg" alt="Uitleenpagina"></a>
+                <h2>De Camino</h2>
+                <a href="#popup6-auteur">
+                    <p>Anya Niewierra</p>
+                </a>
+                <div class="btn-container">
+                    <button class="add-list">
+                        <i class='bx bx-plus'></i>
+                    </button>
+                    <button class="delete-btn">
+                        <i class='bx bxs-trash'></i>
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <div class="page-container">
+            <ul>
+                <li>Vorige</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>Volgende</li>
+            </ul>
+        </div>
+
+        <!-- Popup Auteur -->
+
+        <div id="popup1-auteur" class="overlay">
+            <div class="popup">
+                <h2>Meer van deze auteur</h2>
+
+                <ul class="book-recs">
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <p>Aantal boeken op uw leeslijst: <span>6</span></p>
+                <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
+            </div>
+        </div>
+
+        <div id="popup2-auteur" class="overlay">
+            <div class="popup">
+                <h2>Meer van deze auteur</h2>
+
+                <ul class="book-recs">
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <p>Aantal boeken op uw leeslijst: <span>6</span></p>
+                <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
+            </div>
+        </div>
+
+        <div id="popup3-auteur" class="overlay">
+            <div class="popup">
+                <h2>Meer van deze auteur</h2>
+
+                <ul class="book-recs">
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <p>Aantal boeken op uw leeslijst: <span>6</span></p>
+                <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
+            </div>
+        </div>
+
+        <div id="popup4-auteur" class="overlay">
+            <div class="popup">
+                <h2>Meer van deze auteur</h2>
+
+                <ul class="book-recs">
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <p>Aantal boeken op uw leeslijst: <span>6</span></p>
+                <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
+            </div>
+        </div>
+
+        <div id="popup5-auteur" class="overlay">
+            <div class="popup">
+                <h2>Meer van deze auteur</h2>
+
+                <ul class="book-recs">
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <p>Aantal boeken op uw leeslijst: <span>6</span></p>
+                <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
+            </div>
+        </div>
+
+        <div id="popup6-auteur" class="overlay">
+            <div class="popup">
+                <h2>Meer van deze auteur</h2>
+
+                <ul class="book-recs">
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="book-small">
+                        <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
+                        <div class="btn-container">
+                            <h3>Titel</h3>
+                            <button class="add-list">
+                                <i class='bx bx-list-plus'></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <p>Aantal boeken op uw leeslijst: <span>6</span></p>
+                <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
+            </div>
+        </div>
+
+        <!-- Waarschuwing popup -->
+
+        <dialog id="dialog" class="warning-overlay">
+            <div id="popup" class="warning-popup">
+                <p>Weet je zeker dat je dit boek wilt verwijderen?</p>
+                <div class="warning-buttons">
+                <button id="popup-delete"> Ja, verwijderen</button>
+                <button id="popup-close">Nee, annuleren</button>
+                </div>
+            </div>
+        </dialog>
+
+        <!-- Succesmelding -->
+        <dialog id="dialog-success" class="warning-overlay">
+            <div class="dialog-success">
+            <p>Het boek is succesvol verwijderd!</p>
+            <button id="close" class="close">&times;</button>
+            </div>
+        </dialog>
+
+    </main>
 </body>
-
-<main id="main">
-
-    <div class="logo"><img src="./images/oba_20.png" alt=""></div>
-
-    <h1>Leeslijst</h1>
-
-    <!-- Zoekbalk -->
-
-    <div class="search-container"> <!-- om zoekbalk en sorteermenu te positioneren -->
-        <form class="search">
-            <i class="bx bx-search"></i>
-            <input type="text" placeholder="Zoek..." name="search">
-        </form>
-
-        <!-- Sorteermenu -->
-
-        <form class="sort">
-            <label for="sort">Sorteer op</label>
-            <select name="sort" id="sort">
-                <option value="popular">Populariteit</option>
-                <option value="new-old">Nieuw/oud</option>
-                <option value="old-new">Oud/nieuw</option>
-                <option value="a-z">A-Z</option>
-                <option value="z-a">Z-A</option>
-            </select>
-        </form>
-    </div>
-
-    <!-- Lijst dropdown -->
-
-    <div class="list-container"> <!-- Om de lijst functies te positioneren -->
-        <form class="list">
-            <label for="list">Mijn lijsten</label>
-            <select name="list" id="list">
-                <option value="list-1">Lijst 1</option>
-                <option value="list-2">Lijst 2</option>
-                <option value="list-3">Lijst 3</option>
-                <option value="list-4">Lijst 4</option>
-            </select>
-        </form>
-
-        <button>
-            <i class='bx bx-plus'></i>
-            <p>Nieuwe Lijst</p>
-        </button>
-
-    </div>
-
-    <!-- Boekenlijst -->
-
-    <section class="book-list">
-        <article class="book">
-            <a href="https://zoeken.oba.nl/detail/Isabel-Allende/Violeta/Boek/?itemid=%7Coba-catalogus%7C1254553"><img
-                    src="./images/books/boek7.jpeg" alt="Uitleenpagina"></a>
-            <h2>Violeta</h2>
-            <a href="#popup1-auteur">
-                <p>Isabel Allende</p>
-            </a>
-            <div class="btn-container">
-                <button class="add-list">
-                    <i class='bx bx-list-plus'></i>
-                </button>
-                <button class="delete-btn">
-                    <i class='bx bxs-trash'></i>
-                </button>
-            </div>
-        </article>
-
-        <article class="book">
-            <a
-                href="https://zoeken.oba.nl/detail/Kelly-Weekers/De-kracht-van-keuze-de-vragen-die-ik-mijzelf/Boek/?itemid=%7Coba-catalogus%7C1256986"><img
-                    src="./images/books/boek8.jpg" alt="Uitleenpagina"></a>
-            <h2>De kracht van keuze</h2>
-            <a href="#popup2-auteur">
-                <p>Kelly Weekers</p>
-            </a>
-            <div class="btn-container">
-                <button class="add-list">
-                    <i class='bx bx-list-plus'></i>
-                </button>
-                <button class="delete-btn">
-                    <i class='bx bxs-trash'></i>
-                </button>
-            </div>
-        </article>
-
-        <article class="book">
-            <a href="https://zoeken.oba.nl/detail/Stephen-King/Fairy-tale/Boek/?itemid=%7Coba-catalogus%7C1259739"><img
-                    src="./images/books/boek9.jpeg" alt="Uitleenpagina"></a>
-            <h2>Fairy tale</h2>
-            <a href="#popup3-auteur">
-                <p>Stephen King</p>
-            </a>
-            <div class="btn-container">
-                <button class="add-list">
-                    <i class='bx bx-list-plus'></i>
-                </button>
-                <button class="delete-btn">
-                    <i class='bx bxs-trash'></i>
-                </button>
-            </div>
-        </article>
-
-        <article class="book">
-            <a
-                href="https://zoeken.oba.nl/detail/Raynor-Winn/Het-zoutpad-over-oude-wegen-naar-een-nieuw/Boek/?itemid=%7Coba-catalogus%7C1241638"><img
-                    src="./images/books/boek10.jpg" alt="Uitleenpagina"></a>
-            <h2>Het zoutpad</h2>
-            <a href="#popup4-auteur">
-                <p>Raynor Winn</p>
-            </a>
-            <div class="btn-container">
-                <button class="add-list">
-                    <i class='bx bx-list-plus'></i>
-                </button>
-                <button class="delete-btn">
-                    <i class='bx bxs-trash'></i>
-                </button>
-            </div>
-        </article>
-
-        <article class="book">
-            <a
-                href="https://zoeken.oba.nl/detail/Arthur-Japin/Wat-stilte-wil-roman/Boek/?itemid=%7Coba-catalogus%7C1259690"><img
-                    src="./images/books/boek11.jpeg" alt="Uitleenpagina"></a>
-            <h2>Wat stilte wil</h2>
-            <a href="#popup5-auteur">
-                <p>Arthur Japin</p>
-            </a>
-            <div class="btn-container">
-                <button class="add-list">
-                    <i class='bx bx-list-plus'></i>
-                </button>
-                <button class="delete-btn">
-                    <i class='bx bxs-trash'></i>
-                </button>
-            </div>
-        </article>
-
-        <article class="book">
-            <a href="https://zoeken.oba.nl/detail/Anya-Niewierra/De-Camino/Boek/?itemid=%7Coba-catalogus%7C1242337"><img
-                    src="./images/books/boek12.jpg" alt="Uitleenpagina"></a>
-            <h2>De Camino</h2>
-            <a href="#popup6-auteur">
-                <p>Anya Niewierra</p>
-            </a>
-            <div class="btn-container">
-                <button class="add-list">
-                    <i class='bx bx-list-plus'></i>
-                </button>
-                <button class="delete-btn">
-                    <i class='bx bxs-trash'></i>
-                </button>
-            </div>
-        </article>
-    </section>
-
-    <div class="page-container">
-        <ul>
-            <li>Vorige</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>Volgende</li>
-        </ul>
-    </div>
-
-    <!-- Popup Auteur -->
-
-    <div id="popup1-auteur" class="overlay">
-        <div class="popup">
-            <h2>Meer van deze auteur</h2>
-
-            <ul class="book-recs">
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-            <p>Aantal boeken op uw leeslijst: <span>6</span></p>
-            <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
-        </div>
-    </div>
-
-    <div id="popup2-auteur" class="overlay">
-        <div class="popup">
-            <h2>Meer van deze auteur</h2>
-
-            <ul class="book-recs">
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-            <p>Aantal boeken op uw leeslijst: <span>6</span></p>
-            <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
-        </div>
-    </div>
-
-    <div id="popup3-auteur" class="overlay">
-        <div class="popup">
-            <h2>Meer van deze auteur</h2>
-
-            <ul class="book-recs">
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-            <p>Aantal boeken op uw leeslijst: <span>6</span></p>
-            <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
-        </div>
-    </div>
-
-    <div id="popup4-auteur" class="overlay">
-        <div class="popup">
-            <h2>Meer van deze auteur</h2>
-
-            <ul class="book-recs">
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-            <p>Aantal boeken op uw leeslijst: <span>6</span></p>
-            <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
-        </div>
-    </div>
-
-    <div id="popup5-auteur" class="overlay">
-        <div class="popup">
-            <h2>Meer van deze auteur</h2>
-
-            <ul class="book-recs">
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-            <p>Aantal boeken op uw leeslijst: <span>6</span></p>
-            <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
-        </div>
-    </div>
-
-    <div id="popup6-auteur" class="overlay">
-        <div class="popup">
-            <h2>Meer van deze auteur</h2>
-
-            <ul class="book-recs">
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-6.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-9.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="book-small">
-                    <a href="#"><img src="./images/books/book-7.png" alt="Uitleenpagina"></a>
-                    <div class="btn-container">
-                        <h3>Titel</h3>
-                        <button class="add-list">
-                            <i class='bx bx-list-plus'></i>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-            <p>Aantal boeken op uw leeslijst: <span>6</span></p>
-            <a class="close" href="#" aria-hidden="true" aria-label="close">&times;</a>
-        </div>
-    </div>
-
-    <!-- Waarschuwing popup -->
-
-    <dialog id="dialog" class="warning-overlay">
-        <div id="popup" class="warning-popup">
-            <p>Weet je zeker dat je dit boek wilt verwijderen?</p>
-            <div class="warning-buttons">
-            <button id="popup-delete"> Ja, verwijderen</button>
-            <button id="popup-close">Nee, annuleren</button>
-            </div>
-        </div>
-    </dialog>
-
-    <!-- Succesmelding -->
-    <dialog id="dialog-success" class="warning-overlay">
-        <div class="dialog-success">
-        <p>Het boek is succesvol verwijderd!</p>
-        <button id="close" class="close">&times;</button>
-        </div>
-    </dialog>
-
-</main>
