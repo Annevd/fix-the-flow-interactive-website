@@ -764,10 +764,10 @@ button.homepage-btn {
 }
 
 .rec-heading {
-    text-align: center;
     margin: 0 0.5rem;
-    font-size: 1.875rem;
     margin-bottom: var(--white-space);
+    text-align: center;
+    font-size: 1.875rem;
 }
 
 /* Javascript warning popup */
@@ -776,8 +776,8 @@ button.homepage-btn {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* gaat de helft van zichzelf naar links en omlaag */
     padding: 2em;
+    transform: translate(-50%, -50%); /* gaat de helft van zichzelf naar links en omlaag */
     border-radius: var(--border-radius);
     border: none;
     z-index: 100;
