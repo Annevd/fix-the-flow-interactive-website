@@ -21,9 +21,9 @@ Als de gebruiker een boek van de leeslijst wil verwijderen, kan de gebruiker op 
 Mocht de gebruiker de actie willen annuleren, kan de gebruiker op "Nee, annuleren" klikken om weer terug te gaan naar de homepagina.
 <!-- Voeg een mooie poster visual toe 📸 -->
 ### Interactie visual
-![New Collection With Laptop Mockup Instagram Post-depositphotos-bgremover](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/378e9b41-cf51-4588-b486-99a979f986dc)
-![New Collection With Laptop Mockup Instagram Post-depositphotos-bgremover (1)](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/d1a5c777-668e-48a6-9e91-0cb483d86742)
-![New Collection With Laptop Mockup Instagram Post-depositphotos-bgremover (2)](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/cca71752-3c9c-4692-a6e5-dbce88aa500f)
+![New Collection With Laptop Mockup Instagram Post-depositphotos-bgremover](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/a2da7b02-598e-4d03-ad12-1bce3c0e428e)
+![New Collection With Laptop Mockup Instagram Post-depositphotos-bgremover (1)](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/d8fbd56e-de02-4f91-8532-322fa471988a)
+![New Collection With Laptop Mockup Instagram Post-depositphotos-bgremover (2)](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/80a6b035-0ced-473a-a1b2-ca9d01ad34fe)
 
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
