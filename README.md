@@ -21,9 +21,10 @@ Als de gebruiker een boek van de leeslijst wil verwijderen, kan de gebruiker op 
 Mocht de gebruiker de actie willen annuleren, kan de gebruiker op "Nee, annuleren" klikken om weer terug te gaan naar de homepagina.
 <!-- Voeg een mooie poster visual toe 📸 -->
 ### Interactie visual
-![image](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/5a60cd07-ba9e-4062-954d-ef733c1b665f)
-![image](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/70e952cd-5c77-4796-b6c3-4d70c71dc6d3)
-![image](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/83812af8-c365-4f04-ad64-b80ec5866b3b)
+![New Collection With Laptop Mockup Instagram Post-depositphotos-bgremover](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/378e9b41-cf51-4588-b486-99a979f986dc)
+![New Collection With Laptop Mockup Instagram Post-depositphotos-bgremover (1)](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/d1a5c777-668e-48a6-9e91-0cb483d86742)
+![New Collection With Laptop Mockup Instagram Post-depositphotos-bgremover (2)](https://github.com/Annevd/fix-the-flow-interactive-website/assets/144004647/cca71752-3c9c-4692-a6e5-dbce88aa500f)
+
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
 [Mijn website](https://annevd.github.io/fix-the-flow-interactive-website/leeslijst.html)
