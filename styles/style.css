@@ -348,7 +348,7 @@ h1 {
 }
 
 .search input {
-    /* max-width: 100%; */
+    max-width: 100%;
     color: var(--text-color); 
     font-size: var(--font-size-standard);
     font-family: AvenirMedium, Arial;
