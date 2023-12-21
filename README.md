@@ -31,7 +31,7 @@ Mocht de gebruiker de actie willen annuleren, kan de gebruiker op "Nee, annulere
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
-Voor de Javascript van deze interactie heb ik gebruikt gemaakt van het 3 stappenplan: 1. ```querySelector```, 2 ```addEventListener``` en 3 ```classList```. Met deze 3 stappen heb ik ervoor gezorgd dat de juiste elementen worden geselecteerd, dat er naar de juiste events wordt geluisterd en dat er een class bijvoorbeeld wordt getoggled. Daarnaast heb ik met een ```forEach``` loop ervoor gezorgd dat élk prullenbakje klikbaar is.
+Voor de Javascript van deze interactie heb ik gebruikt gemaakt van het 3 stappenplan: 1. ```querySelector```, 2. ```addEventListener``` en 3. ```classList```. Met deze 3 stappen heb ik ervoor gezorgd dat de juiste elementen worden geselecteerd, dat er naar de juiste events wordt geluisterd en dat er een class bijvoorbeeld wordt getoggled. Daarnaast heb ik met een ```forEach``` loop ervoor gezorgd dat élk prullenbakje klikbaar is.
 
 ## Licentie
 
